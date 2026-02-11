@@ -85,11 +85,11 @@ app.get("/api/live-chart", (req, res) => {
 
 // =============test===================================
 app.get("/", (req, res) => {
-  res.json({message:"Working"});
+  res.json({message:"Working!!!!!!!"});
 });
 
 
-app.listen(5000, () =>
+app.listen(process.env.PORT || 5000, () =>
   console.log("Backend running on http://localhost:5000")
 );
 
