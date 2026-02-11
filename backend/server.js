@@ -6,7 +6,10 @@ const bcrypt = require("bcryptjs");
 const User = require("./models/User");
 
 const app = express();
+
 app.use(cors());
+
+
 app.use(express.json());
 
 /* 🔗 MongoDB connect */
@@ -77,6 +80,12 @@ app.get("/api/live-chart", (req, res) => {
     { name: "NZDJPY", value: Math.floor(Math.random() * 150) + 20 }
   ];
   res.json(data);
+});
+
+
+// =============test===================================
+app.get("/", (req, res) => {
+  res.json({message:"Working"});
 });
 
 
